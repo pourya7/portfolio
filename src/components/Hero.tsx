@@ -17,7 +17,7 @@ const Hero: React.FC = () => (
     direction='column'
     bg='gray.50'
     width='100%'
-    height='calc(100vh - 48px)'
+    minHeight='calc(100vh - 48px)'
     px={[2, 8, 8, 64]}
     py={16}
   >
@@ -39,7 +39,7 @@ const Hero: React.FC = () => (
             label={'Malaysia, Singapore, Turkey, Iran, Spain, Germany and USA'}
             placement='top'
           >
-            <Text as='u' mr={1}>
+            <Text id='planet-cursor' as='u' mr={1}>
               internationally
             </Text>
           </Tooltip>
@@ -61,11 +61,20 @@ const Hero: React.FC = () => (
               as='a'
               // @ts-ignore
               href='https://calendly.com/pourya7/30min'
+              target='_blank'
             >
               Let's talk
             </Button>
           </Tooltip>
-          <Button variant='ghost' rounded='2rem' color='blue.500'>
+          <Button
+            variant='ghost'
+            rounded='2rem'
+            color='blue.500'
+            as='a'
+            // @ts-ignore
+            href='https://docs.google.com/document/d/1O1Gb5ex5qZaoJOz-RHR9TOhaZ4I5ZO9cRNx2Ga4eMdY/edit?usp=sharing'
+            target='_blank'
+          >
             Download my resumé
           </Button>
         </Box>

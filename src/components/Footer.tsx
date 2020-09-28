@@ -1,38 +1,24 @@
 import React from 'react';
-import {Flex, Heading, Image, Link} from '@chakra-ui/core';
+import {Flex, Image, Link} from '@chakra-ui/core';
 
 import {SOCIAL_MEDIA} from '../constants';
 
 const Footer: React.FC = () => (
   <Flex
-    bg='black'
-    color='white'
     width='100%'
-    height='20vh'
+    minHeight='10vh'
     px={[2, 8, 8, 64]}
-    py={8}
-    wrap='wrap'
+    py={2}
+    direction='column'
   >
-    <Heading as='h1' color='gray.300'>
-      Contacts
-    </Heading>
-    <Flex flex={1} justifyContent='flex-end'>
+    <Flex justifyContent='center'>
       {SOCIAL_MEDIA.map(item => (
-        <Flex
-          key={item.name}
-          rounded='lg'
-          bg='gray.300'
-          mr={8}
-          width='150px'
-          alignItems='center'
-          justifyContent='center'
-        >
-          <Link href={item.link} target='_blank'>
-            <Image src={item.logo} alt={item.name} size={12} />
-          </Link>
-        </Flex>
+        <Link href={item.link} target='_blank' mr={1}>
+          <Image src={item.logo} alt={item.name} size={8} />
+        </Link>
       ))}
     </Flex>
+    <Flex justifyContent='center'>© 2019-2020 Pourya Da</Flex>
   </Flex>
 );
 
