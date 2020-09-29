@@ -13,7 +13,7 @@ const Footer: React.FC = () => (
   >
     <Flex justifyContent='center'>
       {SOCIAL_MEDIA.map(item => (
-        <Link href={item.link} target='_blank' mr={1}>
+        <Link key={item.name} href={item.link} target='_blank' mr={1}>
           <Image src={item.logo} alt={item.name} size={8} />
         </Link>
       ))}
