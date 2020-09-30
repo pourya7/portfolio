@@ -88,3 +88,7 @@ export const TESTIMONIALS: Testimonial[] = [
     company: 'Sitejet',
   },
 ];
+
+export const CALENDLY_LINK = 'https://calendly.com/pourya7/30min';
+export const CV_LINK =
+  'https://docs.google.com/document/d/1O1Gb5ex5qZaoJOz-RHR9TOhaZ4I5ZO9cRNx2Ga4eMdY/edit?usp=sharing';

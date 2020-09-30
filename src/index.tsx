@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {ThemeProvider, CSSReset} from '@chakra-ui/core';
+import {ThemeProvider, CSSReset, ColorModeProvider} from '@chakra-ui/core';
 
 import App from './views/App';
 
@@ -10,8 +10,10 @@ import './toasty';
 
 ReactDOM.render(
   <ThemeProvider theme={myTheme}>
-    <CSSReset />
-    <App />
+    <ColorModeProvider>
+      <CSSReset />
+      <App />
+    </ColorModeProvider>
   </ThemeProvider>,
   document.getElementById('root'),
 );
