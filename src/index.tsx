@@ -9,11 +9,13 @@ import myTheme from './theme';
 import './toasty';
 
 ReactDOM.render(
-  <ThemeProvider theme={myTheme}>
-    <ColorModeProvider>
-      <CSSReset />
-      <App />
-    </ColorModeProvider>
-  </ThemeProvider>,
+  <React.StrictMode>
+    <ThemeProvider theme={myTheme}>
+      <ColorModeProvider>
+        <CSSReset />
+        <App />
+      </ColorModeProvider>
+    </ThemeProvider>
+  </React.StrictMode>,
   document.getElementById('root'),
 );

@@ -1,7 +1,10 @@
 import React from 'react';
 import {Avatar, Flex, Heading, Text, useColorMode} from '@chakra-ui/core';
+import {motion} from 'framer-motion';
 
 import {TESTIMONIALS} from '../constants';
+
+const TestimonialCard = motion.custom(Flex);
 
 const Testimonials: React.FC = () => {
   const {colorMode} = useColorMode();
@@ -16,7 +19,7 @@ const Testimonials: React.FC = () => {
       wrap='wrap'
     >
       {TESTIMONIALS.map((person, index) => (
-        <Flex
+        <TestimonialCard
           key={person.name + index}
           position='relative'
           px={4}
@@ -25,7 +28,6 @@ const Testimonials: React.FC = () => {
           color={colorMode === 'light' ? 'gray.700' : 'white'}
           width='320px'
           height='160px'
-          // boxShadow='0 4px 24px 2px rgba(0,0,0,0.1)'
           boxShadow={
             colorMode === 'light' ? '0 4px 24px 2px rgba(0,0,0,0.1)' : ''
           }
@@ -36,6 +38,7 @@ const Testimonials: React.FC = () => {
           direction='column'
           rounded='md'
           m={8}
+          whileHover={{scale: 1.05}}
         >
           <Avatar
             position='absolute'
@@ -50,7 +53,7 @@ const Testimonials: React.FC = () => {
             {person.title} @ {person.company}
           </Heading>
           <Text>{person.testimonial}</Text>
-        </Flex>
+        </TestimonialCard>
       ))}
     </Flex>
   );

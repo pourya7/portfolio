@@ -1,3 +1,24 @@
+type Project = {
+  company: string;
+  companyLogo?: string;
+  designation: string;
+  productTitle: string;
+  productImage?: string;
+};
+
+export const PROJECTS: Project[] = [
+  {
+    productTitle: 'OCBC Bank',
+    company: 'Strands',
+    designation: 'Frontend Developer',
+  },
+  {
+    productTitle: 'Huntington HUB',
+    company: 'Strands',
+    designation: 'Frontend Developer',
+  },
+];
+
 type Company = {
   name: string;
   logo: string;

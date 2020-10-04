@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             To Develop. Test. Improve.
           </Text>
           <Heading as='h1' mb={8} fontFamily='Dancing Script, cursive'>
-            Extreme Programming
+            Web Craftsman
           </Heading>
           <Text mb={8} fontWeight='medium' textAlign='justify'>
             My name is Pourya /'puryɒ/.
