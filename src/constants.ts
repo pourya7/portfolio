@@ -21,29 +21,34 @@ export const PROJECTS: Project[] = [
 
 type Company = {
   name: string;
-  logo: string;
+  logoDark: string;
+  logoLight: string;
   fallback: string;
 };
 
 export const COMPANIES: Company[] = [
   {
     name: 'Huntington Bank',
-    logo: './img/huntington-logo.png',
+    logoDark: './img/huntington-logo.png',
+    logoLight: './img/huntington-logo-white.png',
     fallback: 'https://via.placeholder.com/80',
   },
   {
     name: 'OCBC Bank',
-    logo: './img/ocbc-logo.png',
+    logoDark: './img/ocbc-logo.png',
+    logoLight: './img/ocbc-logo-white.png',
     fallback: 'https://via.placeholder.com/80',
   },
   {
     name: 'TEB Bank',
-    logo: './img/teb-logo.png',
+    logoDark: './img/teb-logo.png',
+    logoLight: './img/teb-logo-white.png',
     fallback: 'https://via.placeholder.com/80',
   },
   {
     name: 'Strands',
-    logo: './img/strands-logo.png',
+    logoDark: './img/strands-logo.png',
+    logoLight: './img/strands-logo-white.png',
     fallback: 'https://via.placeholder.com/80',
   },
 ];

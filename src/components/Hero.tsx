@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
           <Image
             key={company.name}
             fallbackSrc={company.fallback}
-            src={company.logo}
+            src={colorMode === 'light' ? company.logoDark : company.logoLight}
             alt={company.name}
             title={company.name}
             width='100px'
