@@ -13,9 +13,13 @@ jobs:
         uses: actions/checkout@master
 
       - name: Install Dependencies
-        run: npm install -g yarn; yarn install
+        run: |
+          npm install -g yarn
+          yarn install
+
       - name: Build
         run: yarn run build
+
   deploy:
     name: Deploy
     needs: build
@@ -23,6 +27,7 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:

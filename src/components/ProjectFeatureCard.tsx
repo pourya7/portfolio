@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flex, useColorMode} from '@chakra-ui/core';
+import {Flex, Image} from '@chakra-ui/core';
 import {motion} from 'framer-motion';
 
 import {PROJECTS} from '../constants';
@@ -11,28 +11,24 @@ interface IProjectFeatureCard {
   onClick: () => void;
 }
 
-const ProjectFeatureCard: React.FC<IProjectFeatureCard> = ({
-  selectedId,
-  onClick,
-}) => {
-  const {colorMode} = useColorMode();
+const ProjectFeatureCard: React.FC<IProjectFeatureCard> = ({selectedId, onClick}) => {
   return (
     <MotionFlex
       layoutId={`project-card-${selectedId}`}
-      position='fixed'
-      top='5%'
-      left='5%'
-      width='calc(100% - 10%)'
-      height='90vh'
-      p={2}
-      bg={colorMode === 'light' ? 'white' : 'black'}
+      position="fixed"
+      top="5%"
+      left="5%"
+      width="calc(100% - 10%)"
+      height="90vh"
       zIndex={2}
       onClick={onClick}
     >
-      <Flex flexDir='column'>
-        <motion.h2>{PROJECTS[selectedId].productTitle}</motion.h2>
-        <motion.h5>{PROJECTS[selectedId].company}</motion.h5>
-      </Flex>
+      <Image
+        src={PROJECTS[selectedId].productImage}
+        width="100%"
+        height="100%"
+        objectFit="contain"
+      />
     </MotionFlex>
   );
 };

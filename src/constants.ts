@@ -4,18 +4,41 @@ type Project = {
   designation: string;
   productTitle: string;
   productImage?: string;
+  cardImage?: string;
 };
 
 export const PROJECTS: Project[] = [
   {
-    productTitle: 'OCBC Bank',
     company: 'Strands',
+    companyLogo: './img/ocbc-logo-white.png',
     designation: 'Frontend Developer',
+    productTitle: 'OCBC Bank',
+    productImage: './img/OCBC.svg',
+    cardImage: './img/project-card-ocbc.jpg',
   },
   {
-    productTitle: 'Huntington HUB',
     company: 'Strands',
+    companyLogo: './img/huntington-logo-white.png',
     designation: 'Frontend Developer',
+    productTitle: 'Huntington HUB',
+    productImage: './img/Huntington.svg',
+    cardImage: './img/project-card-huntington.jpg',
+  },
+  {
+    company: 'Strands',
+    companyLogo: './img/strands-logo-white.png',
+    designation: 'Frontend Developer',
+    productTitle: 'Strands BFM',
+    productImage: './img/Strands.png',
+    cardImage: './img/project-card-bfm.jpg',
+  },
+  {
+    company: 'Strands',
+    companyLogo: './img/teb-logo-white.png',
+    designation: 'Frontend Developer',
+    productTitle: 'TEB BFM',
+    productImage: './img/TEB.png',
+    cardImage: './img/project-card-teb.jpg',
   },
 ];
 
@@ -27,6 +50,12 @@ type Company = {
 };
 
 export const COMPANIES: Company[] = [
+  {
+    name: 'B2B',
+    logoDark: './img/b2b-logo.png',
+    logoLight: './img/b2b-logo-white.png',
+    fallback: 'https://via.placeholder.com/80',
+  },
   {
     name: 'Huntington Bank',
     logoDark: './img/huntington-logo.png',
@@ -118,3 +147,5 @@ export const TESTIMONIALS: Testimonial[] = [
 export const CALENDLY_LINK = 'https://calendly.com/pourya7/30min';
 export const CV_LINK =
   'https://docs.google.com/document/d/1O1Gb5ex5qZaoJOz-RHR9TOhaZ4I5ZO9cRNx2Ga4eMdY/edit?usp=sharing';
+
+export const YEARS = new Date().getFullYear() - 2014;

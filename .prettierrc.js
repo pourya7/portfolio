@@ -1,17 +1,15 @@
-{
+module.exports = {
+  "$schema": "http://json.schemastore.org/prettierrc",
   "arrowParens": "avoid",
   "bracketSpacing": false,
-  "endOfLine": "lf",
-  "htmlWhitespaceSensitivity": "css",
-  "insertPragma": false,
   "jsxBracketSameLine": false,
-  "jsxSingleQuote": true,
-  "printWidth": 80,
+  "jsxSingleQuote": false,
+  "printWidth": 100,
   "proseWrap": "always",
   "quoteProps": "as-needed",
-  "requirePragma": false,
+  "semi": true,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "useTabs": false
 }
