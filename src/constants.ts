@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
   {
     company: 'Strands',
     companyLogo: './img/ocbc-logo-white.png',
-    designation: 'Frontend Developer',
+    designation: 'Front-end Engineer',
     productTitle: 'OCBC Bank',
     productImage: './img/OCBC.svg',
     cardImage: './img/project-card-ocbc.jpg',
@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
   {
     company: 'Strands',
     companyLogo: './img/huntington-logo-white.png',
-    designation: 'Frontend Developer',
+    designation: 'Front-end Engineer',
     productTitle: 'Huntington HUB',
     productImage: './img/Huntington.svg',
     cardImage: './img/project-card-huntington.jpg',
@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
   {
     company: 'Strands',
     companyLogo: './img/strands-logo-white.png',
-    designation: 'Frontend Developer',
+    designation: 'Front-end Engineer',
     productTitle: 'Strands BFM',
     productImage: './img/Strands.png',
     cardImage: './img/project-card-bfm.jpg',
@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
   {
     company: 'Strands',
     companyLogo: './img/teb-logo-white.png',
-    designation: 'Frontend Developer',
+    designation: 'Front-end Engineer',
     productTitle: 'TEB BFM',
     productImage: './img/TEB.png',
     cardImage: './img/project-card-teb.jpg',
