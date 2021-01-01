@@ -92,7 +92,7 @@ export const SOCIAL_MEDIA: SocialMedia[] = [
   {
     name: 'Github',
     logo: './img/github.svg',
-    link: 'https://github.com/bexic',
+    link: 'https://github.com/pourya7',
   },
   {
     name: 'LinkedIn',
