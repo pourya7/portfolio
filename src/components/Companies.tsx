@@ -13,7 +13,7 @@ const Companies: React.FC = () => {
       px={[2, 8, 8, 64]}
       py={8}
     >
-      <Flex wrap="wrap">
+      <Flex wrap="wrap" alignItems="center">
         {COMPANIES.map(company => (
           <Image
             key={company.name}
