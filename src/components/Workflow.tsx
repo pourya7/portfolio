@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flex, Image, useColorMode} from '@chakra-ui/core';
+import {Flex, Text, Heading, Image, useColorMode} from '@chakra-ui/core';
 
 const Workflow: React.FC = () => {
   const {colorMode} = useColorMode();
@@ -15,7 +15,17 @@ const Workflow: React.FC = () => {
       <Flex alignItems="center" width={['100%', '100%', '60%', '60%']}>
         <Image src="img/workflow.svg" alt="Workflow" width="100%" />
       </Flex>
-      <Flex flex="1">Some text here</Flex>
+      <Flex
+        flex="1"
+        flexDir="column"
+        justifyContent="center"
+        textAlign={['center', 'center', 'left']}
+      >
+        <Heading as="h3" size="lg" mb={4}>
+          Agile Workflow
+        </Heading>
+        <Text>Expericed with Scrum framework to manage complex projects with consistency</Text>
+      </Flex>
     </Flex>
   );
 };
