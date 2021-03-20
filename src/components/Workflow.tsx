@@ -24,7 +24,7 @@ const Workflow: React.FC = () => {
         <Heading as="h3" size="lg" mb={4}>
           Agile Workflow
         </Heading>
-        <Text>Expericed with Scrum framework to manage complex projects with consistency</Text>
+        <Text>Experienced with Scrum framework to manage complex projects with consistency</Text>
       </Flex>
     </Flex>
   );
