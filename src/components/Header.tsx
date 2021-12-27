@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           Pourya Da
         </Heading>
         <Text as="sub" color="gray.500" textTransform="uppercase" fontWeight="bold">
-          Front-end Engineer
+          Product Owner / Team Lead
         </Text>
       </Flex>
       <IconButton

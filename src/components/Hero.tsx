@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           <Text mb={8} fontWeight="medium" textAlign="justify">
             My name is Pourya /'puryɒ/.
             <Text as="strong" mx={1}>
-              I'm a senior frontend developer with over {YEARS} years of experience
+              I am a senior front-end team lead and product owner with {YEARS} years of experience
             </Text>
             <Tooltip
               aria-label=""

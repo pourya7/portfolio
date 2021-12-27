@@ -80,6 +80,12 @@ export const COMPANIES: Company[] = [
     logoLight: './img/strands-logo-white.png',
     fallback: 'https://via.placeholder.com/80',
   },
+  {
+    name: 'WebPros',
+    logoDark: './img/webpros-logo.png',
+    logoLight: './img/webpros-logo-white.png',
+    fallback: 'https://via.placeholder.com/80',
+  },
 ];
 
 type SocialMedia = {
