@@ -81,9 +81,9 @@ export const COMPANIES: Company[] = [
     fallback: 'https://via.placeholder.com/80',
   },
   {
-    name: 'WebPros',
-    logoDark: './img/webpros-logo.png',
-    logoLight: './img/webpros-logo-white.png',
+    name: 'Plesk',
+    logoDark: './img/plesk-logo.svg',
+    logoLight: './img/plesk-logo-white.png',
     fallback: 'https://via.placeholder.com/80',
   },
 ];
