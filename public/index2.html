@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="To Develop. Test. Improve." />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Preload Assets -->
+  <link rel="preload" href="./img/hero.jpg" as="image">
+  <link rel="preload" href="./img/project-card-bfm.jpg" as="image">
+  <link rel="preload" href="./img/project-card-teb.jpg" as="image">
+  <link rel="preload" href="./img/project-card-ocbc.jpg" as="image">
+  <link rel="preload" href="./img/project-card-huntington.jpg" as="image">
+
+  <link rel="preload" href="./img/OCBC.svg" as="image">
+  <link rel="preload" href="./img/Huntington.svg" as="image">
+  <link rel="preload" href="./img/Strands.png" as="image">
+  <link rel="preload" href="./img/TEB.png" as="image">
+
+  <title>Pourya Da 👨‍💻 Front-end Engineer</title>
+  <style>
+    #toasty {
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      bottom: 0;
+      right: -100px;
+      transition: 500ms;
+      background: url('./img/toasty.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100px;
+    }
+
+    #planet-cursor:hover {
+      cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAMAAAAxmgQeAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAD5JREFUGNN1j9EKADAIAnP//9GjFq6w7iU4DNRsB06cb44TJ+UzYUcniqnqoA6ag/62JhjKIU0rxx1lKveuXJ5UAQs/G/2vAAAAAElFTkSuQmCC), auto;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div id='toasty'></div>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <title>Product Showcase - Strands - BFM</title>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col min-h-screen">
+    <div class="flex-grow">
+        <!-- Heading Navbar -->
+        <nav class="flex justify-between items-center h-16 container mx-auto mb-16">
+            <div>
+                <h1 class="text-xl font-bold">Pourya Dashtegoli Pour</h1>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Area Product Owner Lead \ Team Lead \ Engineer</p>
+            </div>
+            <div class="flex gap-8 items-center">
+                <a href="/" class="font-medium hover:underline">Home</a>
+                <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                    <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true"
+                        class="w-6 h-6 dark:hidden">
+                        <path fill="currentColor"
+                            d="M21.4,13.7C20.6,13.9,19.8,14,19,14c-5,0-9-4-9-9c0-0.8,0.1-1.6,0.3-2.4c0.1-0.3,0-0.7-0.3-1 c-0.3-0.3-0.6-0.4-1-0.3C4.3,2.7,1,7.1,1,12c0,6.1,4.9,11,11,11c4.9,0,9.3-3.3,10.6-8.1c0.1-0.3,0-0.7-0.3-1 C22.1,13.7,21.7,13.6,21.4,13.7z">
+                        </path>
+                    </svg>
+                    <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true"
+                        class="w-6 h-6 hidden dark:block">
+                        <g stroke-linejoin="full" stroke-linecap="full" stroke-width="2" fill="none"
+                            stroke="currentColor">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <path d="M12 1v2"></path>
+                            <path d="M12 21v2"></path>
+                            <path d="M4.22 4.22l1.42 1.42"></path>
+                            <path d="M18.36 18.36l1.42 1.42"></path>
+                            <path d="M1 12h2"></path>
+                            <path d="M21 12h2"></path>
+                            <path d="M4.22 19.78l1.42-1.42"></path>
+                            <path d="M18.36 5.64l1.42-1.42"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="container mx-auto">
+            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-center gap-x-8">
+                <div class="flex flex-col content-between">
+                    <h1 class="text-4xl font-bold mb-4">Business Finance Manager (BFM)</h1>
+                    <p class="text-lg my-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque molestias quos ipsa dolor saepe
+                        quasi libero dolore similique nemo voluptatibus, laboriosam dicta consectetur explicabo sit
+                        animi quibusdam aliquam dolorem aut.
+                    </p>
+                    <img src="./img/strands-logo.png" alt="Company Logo" width="150"
+                        class="bg-white object-contain self-center md:self-center lg:self-start">
+                </div>
+                <div>
+                    <img src="./img/projects-strands-bfm.png" alt="Strands BFM" class="mx-auto rounded-2xl">
+                </div>
+            </div>
+        </section>
+
+        <div class="border-t-2 border-gray-100 dark:border-gray-800 my-16"></div>
+
+        <!-- Innovation Section -->
+        <section class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-6">My Story</h2>
+            <p class="mt-16">Description of the feature and your participation in it.</p>
+        </section>
+
+        <div class="border-t-2 border-gray-100 dark:border-gray-800 my-16"></div>
+
+        <!-- Impact Section -->
+        <section class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-6">Impact & Media</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Impact Metrics</h3>
+                    <p>Details on the impact the product had (e.g., users, revenue, performance).</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Media Coverage</h3>
+                    <p>Links to news articles, press releases, or media mentions.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Block Section -->
+    <footer class="dark:bg-gray-800 py-8 px-60 mt-16">
+        <div class="flex flex-col md:flex-row justify-between items-center container mx-auto">
+            <p>&copy; 2024 Pourya Da. All Rights Reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="https://github.com/pourya7"
+                    class="text-blue-500 dark:text-blue-400 hover:text-blue-600">GitHub</a>
+                <a href="https://www.linkedin.com/in/pourya7"
+                    class="text-blue-500 dark:text-blue-400 hover:text-blue-600">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or prefer-color-scheme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+    </script>
+</body>
+
+</html>
