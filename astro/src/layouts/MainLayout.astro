@@ -1,0 +1,71 @@
+---
+import Header from '../components/Header.tsx';
+import Footer from '../components/Footer.tsx';
+const {title} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Pourya Dashtegoli Pour | Area Product Owner Lead | Team Lead | Engineer</title>
+    <style>
+      #toasty {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        bottom: 0;
+        right: -100px;
+        transition: 500ms;
+        background: url('./img/toasty.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100px;
+      }
+
+      #planet-cursor:hover {
+        cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAMAAAAxmgQeAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAD5JREFUGNN1j9EKADAIAnP//9GjFq6w7iU4DNRsB06cb44TJ+UzYUcniqnqoA6ag/62JhjKIU0rxx1lKveuXJ5UAQs/G/2vAAAAAElFTkSuQmCC),
+          auto;
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col min-h-screen">
+    <div class="flex-grow">
+      <Header />
+      <slot />
+      <Footer />
+      <div id="toasty"></div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const keystrokeDelay = 1000;
+        let state: any = {buffer: [], lastKeyTime: Date.now()};
+        document.addEventListener('keydown', event => {
+          const key = event.key;
+          const currentTime = Date.now();
+          let buffer;
+          if (currentTime - state.lastKeyTime > keystrokeDelay) {
+            buffer = [key];
+          } else {
+            buffer = [...state.buffer, key];
+          }
+          state = {buffer, lastKeyTime: currentTime};
+          const userInput = buffer.join('');
+          const code =
+            'ArrowLeftArrowDownArrowLeftArrowRightArrowDownArrowRightArrowLeftArrowLeftArrowRightArrowRight';
+          if (code === userInput) {
+            const toastyEl = document.getElementById('toasty');
+            if (!toastyEl) return;
+            toastyEl.style.right = '0';
+            setTimeout(() => {
+              toastyEl.style.right = '-100px';
+            }, 1000);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
