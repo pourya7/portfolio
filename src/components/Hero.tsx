@@ -21,13 +21,9 @@ export default component$(() => {
                     </p>
 
                     <div class="flex space-x-4 mb-8">
-                        <a href="https://calendly.com/pourya7/30min" class="bg-blue-500 text-white px-4 py-2 rounded"
+                        <a href="https://docs.google.com/document/d/14VTSpwRddP8okgPleWVNfjuLGZpFmD_nSVA8wC7viaQ/pub" class="bg-blue-500 text-white px-4 py-2 rounded"
                             target="_blank">
-                            Let's Talk!
-                        </a>
-
-                        <a href="#" class="border border-blue-500 text-blue-500 px-4 py-2 rounded" target="_blank">
-                            View CV
+                            Checkout my CV!
                         </a>
                     </div>
                 </div>

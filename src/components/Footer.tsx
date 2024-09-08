@@ -8,11 +8,11 @@ export default component$(() => {
         <p>&copy; 2024 Pourya Da. All Rights Reserved.</p>
         <div class="flex space-x-4 mt-4 md:mt-0">
           <a
-            href="https://github.com/pourya7"
+            href="https://github.com/pourya7" target="_blank"
             class="text-blue-500 dark:text-blue-400 hover:text-blue-600">GitHub</a
           >
           <a
-            href="https://www.linkedin.com/in/pourya7"
+            href="https://www.linkedin.com/in/pourya7" target="_blank"
             class="text-blue-500 dark:text-blue-400 hover:text-blue-600">LinkedIn</a
           >
         </div>

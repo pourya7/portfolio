@@ -22,12 +22,12 @@ export default component$<Props>(({ product }) => {
                 </div>
                 <div class="relative">
                     <h3 class="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100">
-                        <a href={product.productURL}>
+                        <div>
                             <span class="absolute inset-0"></span>
                             {product.productTitle}
-                        </a>
+                        </div>
                     </h3>
-                    <p class="mt-2 text-gray-600 dark:text-gray-300">
+                    <p class="mt-2 line-clamp-3 text-gray-600 dark:text-gray-300">
                         {product.productSubtitle}
                     </p>
                 </div>
