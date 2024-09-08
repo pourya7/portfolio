@@ -1,7 +1,6 @@
 ---
-import Header from '../components/Header.tsx';
-import Footer from '../components/Footer.tsx';
-const {title} = Astro.props;
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
 ---
 
 <html lang="en">
@@ -11,7 +10,9 @@ const {title} = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Pourya Dashtegoli Pour | Area Product Owner Lead | Team Lead | Engineer</title>
+    <title>
+      Pourya Dashtegoli Pour | Area Product Owner Lead | Team Lead | Engineer
+    </title>
     <style>
       #toasty {
         position: fixed;
@@ -20,7 +21,7 @@ const {title} = Astro.props;
         bottom: 0;
         right: -100px;
         transition: 500ms;
-        background: url('./img/toasty.png');
+        background: url("./img/toasty.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100px;
@@ -32,7 +33,9 @@ const {title} = Astro.props;
       }
     </style>
   </head>
-  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col min-h-screen">
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col min-h-screen"
+  >
     <div class="flex-grow">
       <Header />
       <slot />
@@ -40,10 +43,10 @@ const {title} = Astro.props;
       <div id="toasty"></div>
     </div>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener("DOMContentLoaded", () => {
         const keystrokeDelay = 1000;
-        let state: any = {buffer: [], lastKeyTime: Date.now()};
-        document.addEventListener('keydown', event => {
+        let state: any = { buffer: [], lastKeyTime: Date.now() };
+        document.addEventListener("keydown", (event) => {
           const key = event.key;
           const currentTime = Date.now();
           let buffer;
@@ -52,16 +55,16 @@ const {title} = Astro.props;
           } else {
             buffer = [...state.buffer, key];
           }
-          state = {buffer, lastKeyTime: currentTime};
-          const userInput = buffer.join('');
+          state = { buffer, lastKeyTime: currentTime };
+          const userInput = buffer.join("");
           const code =
-            'ArrowLeftArrowDownArrowLeftArrowRightArrowDownArrowRightArrowLeftArrowLeftArrowRightArrowRight';
+            "ArrowLeftArrowDownArrowLeftArrowRightArrowDownArrowRightArrowLeftArrowLeftArrowRightArrowRight";
           if (code === userInput) {
-            const toastyEl = document.getElementById('toasty');
+            const toastyEl = document.getElementById("toasty");
             if (!toastyEl) return;
-            toastyEl.style.right = '0';
+            toastyEl.style.right = "0";
             setTimeout(() => {
-              toastyEl.style.right = '-100px';
+              toastyEl.style.right = "-100px";
             }, 1000);
           }
         });
