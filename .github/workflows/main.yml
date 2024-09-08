@@ -5,24 +5,23 @@ on:
       - master
 
 jobs:
-  build:
-    name: CI
+  build-and-deploy:
+    name: CI/CD
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 12
-      - run: npm install -g yarn
+          node-version: 18
 
       - name: Install Dependencies
-        run: yarn install
+        run: npm ci
 
-      - name: Build
-        run: yarn run build
+      - name: Type Check and Build
+        run: npm run build
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
@@ -30,4 +29,3 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
