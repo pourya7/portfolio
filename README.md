@@ -1,47 +1,89 @@
-# Astro Starter Kit: Minimal
+# Pourya Dashtegoli Pour — Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+**Product Engineer | AI Engineer | Full-Stack**
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+Senior Product Engineer with over 10 years of experience architecting high-performance web applications, scalable SaaS platforms, and AI-native products. Deeply proficient in the modern React ecosystem (Next.js, TypeScript) and Python (FastAPI, PydanticAI).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[📅 Schedule a call with me](https://calendar.app.google/164UfwYawwGmsAbQA)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠 Skills
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+| Area | Technologies |
+|---|---|
+| **Frontend** | React, Next.js, TypeScript, Astro, Qwik |
+| **Backend & AI** | Python, FastAPI, PydanticAI, Vercel AI SDK |
+| **AI/ML** | Agentic AI, RAG (Vector Embeddings), Arize Phoenix |
+| **State Management** | Zustand, Redux Toolkit |
+| **Rendering** | SSR, SSG |
+| **Testing** | React Testing Library, Jest |
+| **Data** | PostgreSQL |
+| **Infrastructure** | Docker, Kubernetes, AWS, GCP |
+| **CI/CD** | GitHub Actions |
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 💼 Experience
 
-Any static assets, like images, can be placed in the `public/` directory.
+### TradingStandard, London — Founding Product Engineer *(2025 – Present)*
+Architecting a B2B SaaS platform using Next.js and React. Engineered an AI-native "AI Teacher" agent with Python, PydanticAI, and vector embeddings (RAG) — nominated for "Best AI Solution for Financial Services". Secured first paying client within one month.
 
-## 🧞 Commands
+### Zeal Tech Ltd, London — Area Product Owner *(2022 – 2025)*
+Re-architected the MyZFX web portal, cutting page-load times by 40% and reducing onboarding drop-offs by 30%. Delivered the company's first mobile trading app (iOS/Android), scaling to 100k downloads with 50% week-one activation.
 
-All commands are run from the root of the project, from a terminal:
+### Sitejet, Berlin (Remote) — Senior Frontend Engineer *(2020 – 2022)*
+Led architectural migration to modern React hooks and a scalable design system, reducing page-load time by 40% and halving development cycle time. Contributed to Sitejet's acquisition by Plesk.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Strands, Barcelona (Remote) — Senior Frontend Engineer *(2017 – 2020)*
+Built flagship BFM/PFM web apps used by 800+ banks globally, maintaining 99.9% SLA across multi-tenant deployments. Published technical blogs read by over 50k developers.
 
-## 👀 Want to learn more?
+### Exness, Cyprus (Remote) — Product Engineer (Contract) *(2019)*
+Engineered high-traffic trading competition campaigns with real-time leaderboards.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### B2B International SDN BHD, Kuala Lumpur — Frontend Engineer *(2016 – 2017)*
+Led front-end development for a cloud warehouse portal, reducing order-processing steps from 10 to 6 and increasing test coverage from 0% to 85%.
+
+---
+
+## ✍️ Blog
+
+- [Introducing HyperUX — The Future of AI-Driven Personalisation in FinTech](https://medium.com/@nicepourya/introducing-hyperux-the-future-of-ai-driven-personalisation-in-fintech-f2e0959e0277)
+- [React State Management without Redux](https://medium.com/@nicepourya/react-state-management-without-redux-e4e02e2a75d2) — 50,000+ views
+- [3 Common Mistakes that Impede React Reconciliation](https://medium.com/@nicepourya/3-common-mistakes-that-impede-react-reconciliation-and-updating-processes-8b917f4c15f4)
+
+---
+
+## 🎓 Education
+
+- **Master's Degree**, Computer Networks — Limkokwing University, Malaysia *(2013 – 2015)*
+- **Bachelor's Degree**, Software Engineering — Multimedia University, Malaysia *(2008 – 2013)*
+
+---
+
+## 🏆 Awards
+
+**Winner — Strands Hackathon, Malaysia (2018)**
+18 employees across Barcelona, Buenos Aires, and Kuala Lumpur offices built and showcased innovative fintech projects under the theme "Game Of Hacks: Hacking Is Coming".
+
+---
+
+## 🚀 Tech Stack (This Site)
+
+Built with [Astro 5](https://astro.build/) + [Qwik](https://qwik.dev/) + [Tailwind CSS v4](https://tailwindcss.com/). Deployed on [Firebase Hosting](https://firebase.google.com/products/hosting).
+
+| Command | Action |
+|---|---|
+| `pnpm install` | Install dependencies |
+| `pnpm dev` | Start dev server at `localhost:4321` |
+| `pnpm build` | Type-check and build for production |
+| `pnpm preview` | Preview production build locally |
+
+---
+
+## 📬 Contact
+
+- **Email:** pourya7@gmail.com
+- **GitHub:** [pourya7](https://github.com/pourya7)
+- **LinkedIn:** [Pourya Dashtegoli Pour](https://www.linkedin.com/in/nicepourya/)
+- [📅 Schedule a call](https://calendar.app.google/164UfwYawwGmsAbQA)
