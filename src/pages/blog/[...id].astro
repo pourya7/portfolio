@@ -1,0 +1,64 @@
+---
+import { getCollection, render } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<MainLayout title={post.data.title}>
+  <article class="container mx-auto max-w-3xl">
+    <div class="mb-8">
+      <a href="/blog" class="text-blue-500 dark:text-blue-400 hover:text-blue-600 font-medium">
+        ← Back to Blog
+      </a>
+    </div>
+    <header class="mb-8">
+      <time class="block text-gray-600 dark:text-gray-400 text-sm">
+        {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </time>
+      <h1 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900 dark:text-white">
+        {post.data.title}
+      </h1>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+        {post.data.description}
+      </p>
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mt-4">
+          {post.data.tags.map((tag: string) => (
+            <span class="text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </header>
+    <div class="prose prose-lg dark:prose-invert max-w-none
+                prose-headings:text-gray-900 dark:prose-headings:text-white
+                prose-p:text-gray-700 dark:prose-p:text-gray-300
+                prose-a:text-blue-500 dark:prose-a:text-blue-400
+                prose-strong:text-gray-900 dark:prose-strong:text-white
+                prose-li:text-gray-700 dark:prose-li:text-gray-300">
+      <Content />
+    </div>
+    {post.data.externalUrl && (
+      <div class="mt-8 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-800">
+        <p class="text-gray-700 dark:text-gray-300">
+          This article was originally published on an external platform.
+          <a href={post.data.externalUrl} target="_blank" rel="noopener noreferrer"
+            class="text-blue-500 dark:text-blue-400 hover:text-blue-600 font-medium ml-1">
+            Read the original →
+          </a>
+        </p>
+      </div>
+    )}
+  </article>
+</MainLayout>

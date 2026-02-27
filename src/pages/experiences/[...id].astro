@@ -1,0 +1,59 @@
+---
+import { getCollection, render } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const experiences = await getCollection('experiences');
+  return experiences.map((exp) => ({
+    params: { id: exp.id },
+    props: { experience: exp },
+  }));
+}
+
+const { experience } = Astro.props;
+const { Content } = await render(experience);
+---
+
+<MainLayout title={experience.data.productTitle}>
+  <article class="container mx-auto max-w-3xl">
+    <div class="mb-8">
+      <a href="/#products" class="text-blue-500 dark:text-blue-400 hover:text-blue-600 font-medium">
+        ← Back to Products & Contributions
+      </a>
+    </div>
+    <header class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <img src={experience.data.companyLogo} alt={experience.data.companyName}
+          class="h-10 object-contain bg-gray-800 rounded-lg px-3 py-2" />
+        <div>
+          <p class="text-sm font-semibold text-blue-500 dark:text-blue-400">
+            {experience.data.companyName}
+          </p>
+          {(experience.data.startYear || experience.data.endYear) && (
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              {experience.data.startYear} – {experience.data.endYear}
+            </p>
+          )}
+        </div>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        {experience.data.productTitle}
+      </h1>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+        {experience.data.productSubtitle}
+      </p>
+    </header>
+    {experience.data.productImg && (
+      <img src={experience.data.productImg} alt={experience.data.productTitle}
+        class="w-full rounded-2xl mb-8 object-cover max-h-80" />
+    )}
+    <div class="prose prose-lg dark:prose-invert max-w-none
+                prose-headings:text-gray-900 dark:prose-headings:text-white
+                prose-p:text-gray-700 dark:prose-p:text-gray-300
+                prose-a:text-blue-500 dark:prose-a:text-blue-400
+                prose-strong:text-gray-900 dark:prose-strong:text-white
+                prose-li:text-gray-700 dark:prose-li:text-gray-300">
+      <Content />
+    </div>
+  </article>
+</MainLayout>
