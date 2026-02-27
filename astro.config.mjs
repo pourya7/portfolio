@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
 import qwikdev from "@qwikdev/astro";
-
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [qwikdev(), tailwind()]
+  integrations: [qwikdev()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
