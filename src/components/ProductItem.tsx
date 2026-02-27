@@ -1,14 +1,26 @@
 import { component$ } from "@builder.io/qwik";
-import type { Product } from "../constants/constants";
+
+interface Experience {
+    id: string;
+    companyName: string;
+    companyLogo: string;
+    productImg?: string;
+    productTitle: string;
+    productSubtitle: string;
+    startYear?: string;
+    endYear?: string;
+}
 
 interface Props {
-    product: Product;
+    product: Experience;
 }
 
 export default component$<Props>(({ product }) => {
     return (
-        <article class=" w-full max-w-lg p-4 rounded-2xl overflow-hidden flex flex-col justify-between items-start
-                        border-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800">
+        <a href={`/experiences/${product.id}`}
+            class="w-full max-w-lg p-4 rounded-2xl overflow-hidden flex flex-col justify-between items-start
+                    border-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800
+                    hover:border-blue-400 dark:hover:border-blue-500 transition-colors cursor-pointer no-underline text-inherit">
             <div class="relative w-full min-h-52">
                 <img alt="" src={product.productImg} class="w-full h-full rounded-2xl object-cover absolute top-0 right-0" />
                 <img alt="" src={product.companyLogo} class="relative z-1 w-1/2 h-full m-auto object-contain" />
@@ -22,16 +34,13 @@ export default component$<Props>(({ product }) => {
                 </div>
                 <div class="relative">
                     <h3 class="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100">
-                        <div>
-                            <span class="absolute inset-0"></span>
-                            {product.productTitle}
-                        </div>
+                        {product.productTitle}
                     </h3>
                     <p class="mt-2 line-clamp-3 text-gray-600 dark:text-gray-300">
                         {product.productSubtitle}
                     </p>
                 </div>
             </div>
-        </article>
+        </a>
     );
 });

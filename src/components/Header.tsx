@@ -9,11 +9,12 @@ export default component$(() => {
             <div>
                 <h1 class="text-xl font-bold">Pourya Dashtegoli Pour</h1>
                 <p class="text-sm text-gray-600 dark:text-gray-400">
-                    Area Product Owner Lead \ Team Lead \ Engineer
+                    Product Engineer | AI Engineer | Full-Stack
                 </p>
             </div>
             <div class="flex gap-8 items-center">
-                <a href="#" class="font-medium hover:underline">Home</a>
+                <a href="/" class="font-medium hover:underline">Home</a>
+                <a href="/blog" class="font-medium hover:underline">Blog</a>
                 <button id="themeToggle" onClick$={() => {
                     theme.value = theme.value === 'light' ? 'dark' : 'light';
                     document.querySelector('html')?.classList.toggle('dark');
