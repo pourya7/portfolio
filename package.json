@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/sitemap": "^3.7.0",
     "@builder.io/qwik": "^1.12.1",
     "@qwikdev/astro": "^0.8.2",
     "@qwikest/icons": "^0.0.13",

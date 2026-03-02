@@ -2,6 +2,18 @@
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title = 'Pourya Dashtegoli Pour | Product Engineer | AI Engineer | Full-Stack',
+  description,
+  canonicalUrl = Astro.url.href,
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -11,9 +23,9 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>
-      Pourya Dashtegoli Pour | Area Product Owner Lead | Team Lead | Engineer
-    </title>
+    <link rel="canonical" href={canonicalUrl} />
+    {description && <meta name="description" content={description} />}
+    <title>{title}</title>
     <style>
       #toasty {
         position: fixed;

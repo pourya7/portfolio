@@ -12,9 +12,19 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+// Always use the post's own URL on this site as the canonical.
+// post.data.canonicalUrl can override it (e.g., if this is a cross-post
+// where the external platform was truly first), but the default behaviour
+// is to assert pourya7.com as the authority.
+const canonicalUrl = post.data.canonicalUrl ?? Astro.url.href;
 ---
 
-<MainLayout title={post.data.title}>
+<MainLayout
+  title={post.data.title}
+  description={post.data.description}
+  canonicalUrl={canonicalUrl}
+>
   <article class="container mx-auto max-w-3xl">
     <div class="mb-8">
       <a href="/blog" class="text-blue-500 dark:text-blue-400 hover:text-blue-600 font-medium">
