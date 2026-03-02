@@ -1,0 +1,61 @@
+---
+interface Experience {
+    id: string;
+    companyName: string;
+    companyLogo: string;
+    productImg?: string;
+    productTitle: string;
+    productSubtitle: string;
+    startYear?: string;
+    endYear?: string;
+}
+
+interface Props {
+    product: Experience;
+}
+
+const { product } = Astro.props;
+---
+
+<a
+    href={`/experiences/${product.id}`}
+    class="w-full max-w-lg p-4 rounded-2xl overflow-hidden flex flex-col justify-between items-start
+         border-2 border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800
+         hover:border-blue-400 dark:hover:border-blue-500 transition-colors cursor-pointer no-underline text-inherit"
+>
+    <div class="relative w-full min-h-52">
+        <img
+            alt=""
+            src={product.productImg}
+            class="w-full h-full rounded-2xl object-cover absolute top-0 right-0"
+        />
+        <img
+            alt=""
+            src={product.companyLogo}
+            class="relative z-1 w-1/2 h-full m-auto object-contain"
+        />
+    </div>
+    <div class="max-w-lg">
+        <div class="flex flex-col gap-x-4 my-4">
+            <div>
+                {product.startYear && <time>{product.startYear} - </time>}
+                {product.endYear && <time>{product.endYear}</time>}
+            </div>
+            <p
+                class="relative inline-flex items-center text-sm font-semibold text-blue-500 dark:text-blue-400 capitalize"
+            >
+                {product.companyName}
+            </p>
+        </div>
+        <div class="relative">
+            <h3
+                class="text-lg font-semibold leading-6 text-gray-900 dark:text-gray-100"
+            >
+                {product.productTitle}
+            </h3>
+            <p class="mt-2 line-clamp-3 text-gray-600 dark:text-gray-300">
+                {product.productSubtitle}
+            </p>
+        </div>
+    </div>
+</a>

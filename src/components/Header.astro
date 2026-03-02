@@ -1,0 +1,61 @@
+---
+// Theme toggle uses a small inline script — no framework needed
+---
+
+<nav class="flex justify-between items-center h-16 container mx-auto mb-16">
+    <div>
+        <h1 class="text-xl font-bold">Pourya Dashtegoli Pour</h1>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+            Product Engineer | AI Engineer | Full-Stack
+        </p>
+    </div>
+    <div class="flex gap-8 items-center">
+        <a href="/" class="font-medium hover:underline">Home</a>
+        <a href="/blog" class="font-medium hover:underline">Blog</a>
+        <button
+            id="themeToggle"
+            class="p-2 rounded-full bg-gray-200 dark:bg-gray-700"
+            aria-label="Toggle dark mode"
+        >
+            <!-- Sun icon (shown in light mode) -->
+            <svg
+                class="w-5 h-5 block dark:hidden"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+            >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <!-- Moon icon (shown in dark mode) -->
+            <svg
+                class="w-5 h-5 hidden dark:block"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+            >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<script>
+    const toggle = document.getElementById("themeToggle");
+    toggle?.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+    });
+</script>

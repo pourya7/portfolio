@@ -1,13 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
-import Hero from '../components/Hero';
-import Products from '../components/Products';
-import Posts from '../components/Posts';
-import MainLayout from '../layouts/MainLayout.astro';
+import { getCollection } from "astro:content";
+import Hero from "../components/Hero.astro";
+import Products from "../components/Products.astro";
+import Posts from "../components/Posts.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
-const blogPosts = (await getCollection('blog'))
+const blogPosts = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .map(post => ({
+  .map((post) => ({
     id: post.id,
     title: post.data.title,
     description: post.data.description,
@@ -15,9 +15,9 @@ const blogPosts = (await getCollection('blog'))
     externalUrl: post.data.externalUrl,
   }));
 
-const experiences = (await getCollection('experiences'))
+const experiences = (await getCollection("experiences"))
   .sort((a, b) => a.data.order - b.data.order)
-  .map(exp => ({
+  .map((exp) => ({
     id: exp.id,
     companyName: exp.data.companyName,
     companyLogo: exp.data.companyLogo,

@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import qwikdev from "@qwikdev/astro";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
@@ -7,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: 'https://pourya7.com',
   trailingSlash: 'never',
-  integrations: [qwikdev(), sitemap()],
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
