@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const title = "404 — Page Not Found | Pourya Dashtegoli Pour";
+const description = "The page you were looking for does not exist.";
+---
+
+<MainLayout {title} {description}>
+    <section class="container mx-auto max-w-2xl text-center py-24 px-4">
+        <p class="text-7xl font-bold text-blue-500 dark:text-blue-400">404</p>
+        <h1 class="mt-4 text-3xl font-bold text-gray-900 dark:text-white">
+            Page not found
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+            The page you were looking for doesn't exist or has been moved.
+        </p>
+        <div class="mt-8 flex justify-center gap-4">
+            <a
+                href="/"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-2 rounded transition-colors"
+            >
+                Go home
+            </a>
+            <a
+                href="/blog"
+                class="border border-blue-500 text-blue-500 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 font-medium px-6 py-2 rounded transition-colors"
+            >
+                Read the blog
+            </a>
+        </div>
+    </section>
+</MainLayout>
