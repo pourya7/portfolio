@@ -12,6 +12,8 @@ const blog = defineCollection({
         tags: z.array(z.string()).default([]),
         externalUrl: z.string().url().optional(),
         canonicalUrl: z.string().url().optional(),
+        // Path relative to /public or absolute URL — used for OG image (1200×630 px recommended)
+        image: z.string().optional(),
     }),
 });
 

@@ -12,7 +12,7 @@ export default component$(() => {
             class="text-blue-500 dark:text-blue-400 hover:text-blue-600">GitHub</a
           >
           <a
-            href="https://www.linkedin.com/in/pourya7" target="_blank"
+            href="https://www.linkedin.com/in/pourya7/" target="_blank"
             class="text-blue-500 dark:text-blue-400 hover:text-blue-600">LinkedIn</a
           >
         </div>

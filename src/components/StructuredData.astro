@@ -1,0 +1,47 @@
+---
+interface Props {
+    type: "BlogPosting" | "WebSite" | "Person";
+    title: string;
+    description: string;
+    canonicalUrl: string;
+    pubDate?: Date;
+    updatedDate?: Date;
+    image?: string;
+}
+
+const { type, title, description, canonicalUrl, pubDate, updatedDate, image } =
+    Astro.props;
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "";
+
+const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": type,
+    headline: title,
+    name: title,
+    description,
+    url: canonicalUrl,
+    author: {
+        "@type": "Person",
+        name: "Pourya Dashtegoli Pour",
+        url: siteUrl,
+        sameAs: [
+            "https://github.com/pourya7",
+            "https://www.linkedin.com/in/pourya7/",
+            "https://medium.com/@pourya7",
+            "https://dev.to/pourya7",
+        ],
+    },
+};
+
+if (pubDate) schema.datePublished = pubDate.toISOString();
+if (updatedDate) schema.dateModified = updatedDate.toISOString();
+else if (pubDate) schema.dateModified = pubDate.toISOString();
+if (image)
+    schema.image = image.startsWith("http") ? image : `${siteUrl}${image}`;
+if (type === "BlogPosting") {
+    schema.mainEntityOfPage = { "@type": "WebPage", "@id": canonicalUrl };
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -49,8 +49,9 @@ Led front-end development for a cloud warehouse portal, reducing order-processin
 ## ✍️ Blog
 
 - [Introducing HyperUX — The Future of AI-Driven Personalisation in FinTech](https://medium.com/@nicepourya/introducing-hyperux-the-future-of-ai-driven-personalisation-in-fintech-f2e0959e0277)
-- [React State Management without Redux](https://medium.com/@nicepourya/react-state-management-without-redux-e4e02e2a75d2) — 50,000+ views
-- [3 Common Mistakes that Impede React Reconciliation](https://medium.com/@nicepourya/3-common-mistakes-that-impede-react-reconciliation-and-updating-processes-8b917f4c15f4)
+- [React State Management without Redux](https://medium.com/strands-tech-corner/react-state-management-without-redux-d39c7087039d) — 50,000+ views
+- [3 Common Mistakes that Impede React Reconciliation](https://medium.com/strands-tech-corner/3-common-mistakes-that-impede-react-reconciliation-and-updating-processes-8b917ebde61e)
+- [How to Validate an Image in Redux Form](https://medium.com/strands-tech-corner/how-to-validate-an-image-in-redux-form-1cef01e4ff6c)
 
 ---
 
